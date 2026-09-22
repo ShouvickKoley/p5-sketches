@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sketchbook</title>
+<meta name="description" content="Nine original p5.js sketches by Shouvick Koley, click-to-run studies in the spirit of a sketchbook.">
+<script>
+(function(){
+  try {
+    if (localStorage.getItem('sketchbook-theme') === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap topbar">
+    <div class="brand">SHOUVICK KOLEY</div>
+    <nav class="links">
+      <a href="https://shouvick.design" target="_blank" rel="noopener">Work</a>
+      <a href="#sketches">Sketches</a>
+      <a href="https://editor.p5js.org/SKoley89/" target="_blank" rel="noopener">p5.js</a>
+      <a href="https://linkedin.com/in/skoley" target="_blank" rel="noopener">About</a>
+      <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle light and dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1 class="title">Sketchbook</h1>
+    <p class="subtitle">Nine small p5.js studies, running live below. <b>All original</b>, all written from scratch.</p>
+  </div>
+</section>
+
+<main class="wrap" id="sketches">
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer class="site">
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;width:100%">
+    <span>&copy; 2026 Shouvick Koley</span>
+    <span style="display:flex;gap:20px;flex-wrap:wrap">
+      <a href="https://editor.p5js.org/SKoley89/" target="_blank" rel="noopener">p5.js editor &#8599;</a>
+      <a href="mailto:sk@shouvick.design">sk@shouvick.design</a>
+    </span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
